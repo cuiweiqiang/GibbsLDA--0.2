@@ -64,7 +64,7 @@ model::~model() {
     if (nw) {
 	for (int w = 0; w < V; w++) {
 	    if (nw[w]) {
-		delete nw[w];
+		delete [] nw[w];
 	    }
 	}
     }
@@ -72,7 +72,7 @@ model::~model() {
     if (nd) {
 	for (int m = 0; m < M; m++) {
 	    if (nd[m]) {
-		delete nd[m];
+		delete [] nd[m];
 	    }
 	}
     } 
@@ -113,7 +113,7 @@ model::~model() {
     if (newnw) {
 	for (int w = 0; w < newV; w++) {
 	    if (newnw[w]) {
-		delete newnw[w];
+		delete [] newnw[w];
 	    }
 	}
     }
@@ -121,7 +121,7 @@ model::~model() {
     if (newnd) {
 	for (int m = 0; m < newM; m++) {
 	    if (newnd[m]) {
-		delete newnd[m];
+		delete [] newnd[m];
 	    }
 	}
     } 
@@ -638,7 +638,7 @@ int model::init_est() {
 	
         // initialize for z
         for (n = 0; n < N; n++) {
-    	    int topic = (int)(((double)random() / RAND_MAX) * K);
+    	    int topic = (int)(((double)random() / RAND_MAX + 1) * K);
     	    z[m][n] = topic;
     	    
     	    // number of instances of word i assigned to topic j
@@ -940,7 +940,7 @@ int model::init_inf() {
         for (n = 0; n < N; n++) {
     	    int w = pnewdata->docs[m]->words[n];
     	    int _w = pnewdata->_docs[m]->words[n];
-    	    int topic = (int)(((double)random() / RAND_MAX) * K);
+    	    int topic = (int)(((double)random() / RAND_MAX + 1) * K);
     	    newz[m][n] = topic;
     	    
     	    // number of instances of word i assigned to topic j
