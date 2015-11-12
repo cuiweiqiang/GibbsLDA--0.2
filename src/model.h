@@ -1,10 +1,10 @@
 /*
  * Copyright (C) 2007 by
  * 
- * 	Xuan-Hieu Phan
- *	hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
- * 	Graduate School of Information Sciences
- * 	Tohoku University
+ *  Xuan-Hieu Phan
+ *  hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
+ *  Graduate School of Information Sciences
+ *  Tohoku University
  *
  * GibbsLDA++ is a free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -29,8 +29,8 @@
  *   http://www.arbylon.net/publications/text-est.pdf
  */
 
-#ifndef	_MODEL_H
-#define	_MODEL_H
+#ifndef _MODEL_H
+#define _MODEL_H
 
 #include "constants.h"
 #include "dataset.h"
@@ -41,24 +41,24 @@ using namespace std;
 class model {
 public:
     // fixed options
-    string wordmapfile;		// file that contains word map [string -> integer id]
-    string trainlogfile;	// training log file
-    string tassign_suffix;	// suffix for topic assignment file
-    string theta_suffix;	// suffix for theta file
-    string phi_suffix;		// suffix for phi file
-    string others_suffix;	// suffix for file containing other parameters
-    string twords_suffix;	// suffix for file containing words-per-topics
+    string wordmapfile;     // file that contains word map [string -> integer id]
+    string trainlogfile;    // training log file
+    string tassign_suffix;  // suffix for topic assignment file
+    string theta_suffix;    // suffix for theta file
+    string phi_suffix;      // suffix for phi file
+    string others_suffix;   // suffix for file containing other parameters
+    string twords_suffix;   // suffix for file containing words-per-topics
 
-    string dir;			// model directory
-    string dfile;		// data file    
-    string model_name;		// model name
-    int model_status;		// model status:
-				// MODEL_STATUS_UNKNOWN: unknown status
-				// MODEL_STATUS_EST: estimating from scratch
-				// MODEL_STATUS_ESTC: continue to estimate the model from a previous one
-				// MODEL_STATUS_INF: do inference
+    string dir;         // model directory
+    string dfile;       // data file    
+    string model_name;      // model name
+    int model_status;       // model status:
+                // MODEL_STATUS_UNKNOWN: unknown status
+                // MODEL_STATUS_EST: estimating from scratch
+                // MODEL_STATUS_ESTC: continue to estimate the model from a previous one
+                // MODEL_STATUS_INF: do inference
 
-    dataset * ptrndata;	// pointer to training dataset object
+    dataset * ptrndata; // pointer to training dataset object
     dataset * pnewdata; // pointer to new dataset object
 
     mapid2word id2word; // word map [int => string]
@@ -97,7 +97,7 @@ public:
     // --------------------------------------
     
     model() {
-	set_default_values();
+       set_default_values();
     }
           
     ~model();
@@ -137,7 +137,7 @@ public:
     // init for estimation
     int init_est();
     int init_estc();
-	
+    
     // estimate LDA model using Gibbs sampling
     void estimate();
     int sampling(int m, int n);

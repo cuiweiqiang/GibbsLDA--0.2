@@ -1,10 +1,10 @@
 /*
  * Copyright (C) 2007 by
  * 
- * 	Xuan-Hieu Phan
- *	hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
- * 	Graduate School of Information Sciences
- * 	Tohoku University
+ *  Xuan-Hieu Phan
+ *  hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
+ *  Graduate School of Information Sciences
+ *  Tohoku University
  *
  * GibbsLDA++ is a free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
