@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2007 by
- * 
+ *
  *  Xuan-Hieu Phan
  *  hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
  *  Graduate School of Information Sciences
@@ -34,17 +34,17 @@ int main(int argc, char ** argv) {
         show_help();
         return 1;
     }
-    
+
     if (lda.model_status == MODEL_STATUS_EST || lda.model_status == MODEL_STATUS_ESTC) {
         // parameter estimation
         lda.estimate();
     }
-    
+
     if (lda.model_status == MODEL_STATUS_INF) {
         // do inference
         lda.inference();
     }
-    
+
     return 0;
 }
 

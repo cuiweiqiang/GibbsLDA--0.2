@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2007 by
- * 
+ *
  * Xuan-Hieu Phan
  * hieuxuan@ecei.tohoku.ac.jp or pxhieu@gmail.com
  * Graduate School of Information Sciences
